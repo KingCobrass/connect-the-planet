@@ -74,6 +74,7 @@ namespace Connect.API.Controllers
         /// CP022: User Sign up/Update/Delete Failed.
         ///  <br>CP028: Email Already Exist!.</br>
         ///  CP001: Unexpected System Error.
+        ///  <br> Required parameters: firstname, lastname, email</br>
         /// </remarks>
         /// <param name="user"></param>
         /// <returns></returns>
@@ -110,6 +111,7 @@ namespace Connect.API.Controllers
         ///  <br>CP026: Login Success.</br>
         /// CP029: Login Failed. Please check the email address and try again.
         ///  <br>CP001: Unexpected System Error.</br>
+        ///  Required parameters: email
         /// </remarks>
         /// <param name="connectCredentials"></param>
         /// <returns></returns>

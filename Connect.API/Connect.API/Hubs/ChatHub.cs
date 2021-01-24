@@ -11,7 +11,7 @@ namespace Connect.API.Hubs
   
         public Task SendMessage(string userName, string message)
         {
-            return Clients.All.SendAsync("ReceiveOne", userName, message);
+            return Clients.All.SendAsync("ReceiveGroupMessage", userName, message);
         }
        
     }

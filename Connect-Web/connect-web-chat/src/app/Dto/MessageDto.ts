@@ -1,5 +1,7 @@
 export class MessageDto {
-    public fromEmail: string = '';
-    public toEmail: string = '';
+    public userName: string = '';
+    public userId: string = '';
+    public groupId: string = '';
+    public toConnectionId: string = '';
     public message: string = '';
   }

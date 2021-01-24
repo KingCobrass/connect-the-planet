@@ -13,7 +13,7 @@ namespace connect.Interface.User
         string Email { get; set; }
         DateTime CreateDate { get; set; }
         DateTime? ModifyDate { get; set; }
-        DateTime? LastSighInDate { get; set; }
+        DateTime? LastSignInDate { get; set; }
         string ConnectionId { get; set; }
         string Token { get; set; }
         int IsLive { get; set; }

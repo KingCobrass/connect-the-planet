@@ -18,7 +18,7 @@ namespace Connect.API.Models.Chat
 
         [Required(ErrorMessage = "User Full Name Is Required")]
         [DataType(DataType.Text)]
-        [StringLength(100, ErrorMessage = "The {0} must be at least (6) and at most (100) characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least (6) and at most (100) characters long.", MinimumLength = 3)]
         public string UserName { get; set; }
         [Required(ErrorMessage = "User Id Is Required")]
         [DataType(DataType.Text)]
@@ -30,7 +30,6 @@ namespace Connect.API.Models.Chat
         [StringLength(10000, ErrorMessage = "The {0} must be at least (1) and at most (10000) characters long.", MinimumLength = 1)]
         public string Message { get; set; }
 
-        [Required(ErrorMessage = "Message Date Is Required")]
         [DataType(DataType.DateTime)]
         public DateTime MessageDate { get; set; }
         public DateTime? ModifyDate { get; set; }
@@ -40,7 +39,7 @@ namespace Connect.API.Models.Chat
         public string GroupId { get; set; }
         [Required(ErrorMessage = "ToConnectionId Is Required")]
         [DataType(DataType.Text)]
-        [StringLength(100, ErrorMessage = "The {0} must be at least (8) and at most (100) characters long.", MinimumLength = 8)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least (8) and at most (100) characters long.", MinimumLength = 6)]
         public string ToConnectionId { get; set; }
         public int IsActive { get; set; }
     }

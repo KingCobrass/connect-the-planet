@@ -60,7 +60,7 @@ CREATE TABLE [dbo].[Users](
 	[Email] [varchar](200) NOT NULL,
 	[CreateDate] [datetime] NOT NULL,
 	[ModifyDate] [datetime] NULL,
-	[LastSighInDate] [datetime] NULL,
+	[LastSignInDate] [datetime] NULL,
 	[ConnectionId] [varchar](100) NULL,
 	[Token] [varchar](1) NULL,
 	[IsLive] [int] NOT NULL,

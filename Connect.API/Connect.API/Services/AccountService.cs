@@ -77,7 +77,7 @@ namespace Connect.API.Services
                     var tokenHandler = new JwtSecurityTokenHandler();
                     var key = Encoding.ASCII.GetBytes(this._appSettings.ConnectJwt.ApiSecret);
 
-                    DateTime expiryTime = DateTime.UtcNow.AddSeconds(this._appSettings.ConnectJwt.AccessTokenExpireTime);
+                    DateTime expiryTime = DateTime.UtcNow.AddSeconds(this._appSettings.ConnectJwt.AccessTokenLongExpireTime);
                     var tokenDescriptor = new SecurityTokenDescriptor
                     {
                         Subject = new ClaimsIdentity(new Claim[]
@@ -94,7 +94,7 @@ namespace Connect.API.Services
 
                     this._cpLogger.LogInfo($"AccountService->GetLogin-> Success for the email:: {email}");
 
-                    resposeToken.ExpiresIn = this._appSettings.ConnectJwt.AccessTokenExpireTime;
+                    resposeToken.ExpiresIn = this._appSettings.ConnectJwt.AccessTokenLongExpireTime;
                     resposeToken.TokenType = "bearer";
                     resposeToken.AccessToken = tokenString;
 

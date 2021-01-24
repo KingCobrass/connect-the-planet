@@ -108,7 +108,7 @@ namespace connect.api
                 {
                     OnTokenValidated = context =>
                     {
-                        DateTime secretDate = DateTime.UtcNow.AddSeconds(appSettings.ConnectJwt.AccessTokenExpireTime);
+                        DateTime secretDate = DateTime.UtcNow.AddSeconds(appSettings.ConnectJwt.AccessTokenLongExpireTime);
 
                         if (DateTime.UtcNow.Subtract(secretDate).TotalSeconds > 0)
                         {
@@ -154,7 +154,7 @@ namespace connect.api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHub<ChatHub>("/connectPlanetChat");
+                endpoints.MapHub<ChatHub>("/connectPlanetChats");
             });
         }
     }
